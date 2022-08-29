@@ -20,7 +20,7 @@ function Barreira(reversa = false) {
 // document.querySelector('[wm-flappy]').appendChild(b.elemento)
 
 function ParDeBarreiras(altura, abertura, x) {
-    this.elemento = novoElemento['div', 'par-de-barreiras']
+    this.elemento = novoElemento('div', 'par-de-barreiras')
 
     this.superior = new Barreira(true)
     this.inferior = new Barreira(false)
@@ -43,5 +43,6 @@ function ParDeBarreiras(altura, abertura, x) {
     this.setX(x)
 }
 
-const b = new ParDeBarreiras(700,200,400)
+const b = new ParDeBarreiras(700, 200, 400)
+
 document.querySelector('[wm-flappy]').appendChild(b.elemento)
