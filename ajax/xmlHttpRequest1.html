@@ -29,34 +29,37 @@
             xhr.send()
         }
 
+        function criarTabela(estados) {
+            const linhas = estados.map(estados => {
+                const tdId = document.createElement('td')
+                tdId.innerHTML = estado.id
+
+                const tdNome = document.createElement('td')
+                tdNome.innerHTML = estado.nome
+
+                const tdSigla = document.createElement('td')
+                tdSigla.innerHTML = estado.sigla
+
+                const tr = document.createElement('tr')
+
+                tr.appendChild(tdId)
+                tr.appendChild(tdNome)
+                tr.appendChild(tdSigla)
+
+                return tr
+            })
+
+            const tabela = document.createElement('table')
+            linhas.forEach(linha => tabela.appendChild(linha))
+            document.body.appendChild(tabela)
+        }
+
         ajax({
             url: "dados/estados.json",
             metodo: "get",
             sucesso(resposta) {
                 const estados = JSON.parse(resposta)
-
-                const linhas = estados.map(estados => {
-                    const tdId = document.createElement('td')
-                    tdId.innerHTML = estado.id
-
-                    const tdNome = document.createElement('td')
-                    tdNome.innerHTML = estado.nome
-
-                    const tdSigla = document.createElement('td')
-                    tdSigla.innerHTML = estado.sigla
-
-                    const tr = document.createElement('tr')
-
-                    tr.appendChild(tdId)
-                    tr.appendChild(tdNome)
-                    tr.appendChild(tdSigla)
-
-                    return tr
-                })
-
-                const tabela = document.createElement('table')
-                linhas.forEach(linha => tabela.appendChild(linha))
-                document.body.appendChild(tabela)
+                criarTabela(estados)                
             },
             erro(e) {
                 const msg = document.createTextNode(`${e.codigo}:${e.texto}`)
