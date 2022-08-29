@@ -60,7 +60,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
             par.setX(par.getX() - deslocamento)
 
             if (par.getX() < -par.getLargura()) {
-                par.setX(par.getX() + espaco * this.pares.lenght)
+                par.setX(par.getX() + espaco * this.pares.length)
                 par.sortearAbertura()
             }
 
