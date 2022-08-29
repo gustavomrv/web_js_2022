@@ -134,6 +134,19 @@ function estaoSobrepostos(elementoA, elementoB){
     return horizontal && vertical
 }
 
+function colidiu(passaro, barreiras) {
+    let colidiu = false
+    barreiras.pares.forEach(ParDeBarreiras => {
+        if (!colidiu) {
+            const superior = ParDeBarreiras.superior.elemento
+            const inferior = ParDeBarreiras.inferior.elemento
+            colidiu = estaoSobrepostos(passaro.elemento, superior) ||
+            estaoSobrepostos(passaro.elemento, inferior)
+        }
+    })
+    return colidiu
+}
+
 function FlappyBird() {
     let pontos = 0
 
