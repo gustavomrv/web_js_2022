@@ -61,7 +61,17 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
 
             if (par.getX() < -par.getLargura()) {
                 par.setX(par.getX() + espaco * this.pares.lenght)
+                par.sortearAbertura()
             }
+
+            const meio = largura / 2
+            const cruzouOMeio = par.getX() + deslocamento >= meio && par.getX() < meio
+            if (cruzouOMeio) 
+                notificarPonto()
         })
     }
 }
+
+const barreiras = new Barreiras(700,1200,200,400)
+const areaDoJogo = document.querySelector('[wm-flappy]')
+barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
