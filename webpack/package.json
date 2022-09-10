@@ -11,11 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.3",
-    "sass-"
+    "sass-loader": "13.0.2",
     "css-loader": "0.28.11",
     "mini-css-extract-plugin": "0.4.0",
     "style-loader": "0.21.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.10.0"
-  },
+  }
 }
