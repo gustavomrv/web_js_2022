@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -11,7 +12,13 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "estilo.css"
-        })
+        }),
+        new TerserPlugin({
+            parallel: true,
+            terserOptions: {
+                ecma: 6,
+            },
+        }),
     ],
     module: {
         rules: [{
