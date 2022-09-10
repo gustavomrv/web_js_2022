@@ -1,3 +1,7 @@
-import React from 'react'
+import React, { Fragment} from 'react'
 
-export default props => <h1>Good day {props.namep}</h1>
+export default props => 
+    <Fragment>
+        <h1>Test One {props.namep}</h1>
+        <h2>Test Two</h2>
+    </Fragment>
