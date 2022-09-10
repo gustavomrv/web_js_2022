@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import First from './components/first'
+import Teste from './components/teste'
 
-ReactDOM.render(<First />, document.getElementById('root'))
+ReactDOM.render(<Teste namep="gus" />, document.getElementById('root'))
