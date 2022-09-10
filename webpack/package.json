@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "5.1.5",
+    "optimize-css-assets-webpack-plugin": "4.0.1",
+    "uglifyjs-webpack": "1.2.5",
     "node-sass": "^7.0.3",
     "sass-loader": "7.0.1",
     "css-loader": "0.28.11",
