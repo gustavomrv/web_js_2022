@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Teste from './components/teste'
+// import Teste from './components/teste'
 import Saudacao from './components/saudacao'
 
 ReactDOM.render(
