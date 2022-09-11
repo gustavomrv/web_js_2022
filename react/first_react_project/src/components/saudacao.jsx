@@ -3,8 +3,8 @@ import React from "react"
 export default class Saudacao extends React.Component {
     
     state = {
-        tipo: "Oi",
-        nome: "Gustest"
+        tipo: this.props.tipo,
+        nome: this.props.nome
     }
 
     setTipo(e) {
