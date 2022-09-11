@@ -11,6 +11,18 @@ export default class Saudacao extends React.Component {
         this.setState({ tipo: e.target.value})
     }
 
+    setNome(e) {
+        this.setState({ nome: e.target.value})
+    }
+
+    // setTipo(e) {
+    //     let i = 0
+    //     setInterval(() => {
+    //         this.setState({tipo:++i})
+    //     }, 1000)
+    //     this.setState({tipo:e.target.value})
+    // }
+
     render() {
         const { tipo, nome} = this.state
         return (
@@ -19,7 +31,8 @@ export default class Saudacao extends React.Component {
                 <hr />
                 <input type="text" placeholder="Tipo..." value={tipo} 
                 onChange={e => this.setTipo(e)} /> 
-                <input type="text" placeholder="Nome..." value={nome} />
+                <input type="text" placeholder="Nome..." value={nome}
+                onChange={e => this.setNome(e)} />
             </div>  
         )
     }
