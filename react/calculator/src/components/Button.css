@@ -26,6 +26,10 @@
     color: #FFF;
 }
 
+.button.triple:active {
+    background-color: rgb(94, 93, 93);
+}
+
 .button.operation {
     background-color: #fa8231;
     color: #FFF;
